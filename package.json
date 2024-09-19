@@ -1,0 +1,22 @@
+{
+  "scripts": {
+    "build": "npm-run-all clean tsc",
+    "clean": "rimraf dist",
+    "nodemon": "nodemon --watch dist",
+    "start": "node dist/index.js",
+    "dev": "npm-run-all build start",
+    "tsc": "tsc",
+    "tsc:watch": "tsc --watch"
+  },
+  "dependencies": {
+    "discord.js": "^14.16.1",
+    "mongodb": "^5.9.2",
+    "reflect-metadata": "^0.2.2",
+    "tslog": "^4.9.3",
+    "typeorm": "^0.3.20"
+  },
+  "devDependencies": {
+    "@types/node": "^22.5.4",
+    "dotenv": "^16.4.5"
+  }
+}

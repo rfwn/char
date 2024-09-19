@@ -1,0 +1,18 @@
+{
+	"compilerOptions": {
+		"target": "ES2022",
+		"module": "CommonJS",
+		"outDir": "./dist",
+		"rootDir": "./src",
+		"strict": true,
+		"strictPropertyInitialization": false,
+		"moduleResolution": "Node",
+		"esModuleInterop": true,
+		"sourceMap": false,
+		"forceConsistentCasingInFileNames": true,
+		"useUnknownInCatchVariables": false,
+		"experimentalDecorators": true,
+		"emitDecoratorMetadata": true,
+	},
+	"include": ["src"]
+}
