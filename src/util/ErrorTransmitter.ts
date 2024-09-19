@@ -1,6 +1,6 @@
-import { ILogObj, ILogObjMeta, IMeta } from "tslog";
-import { WebhookClient, EmbedBuilder, codeBlock } from "discord.js";
-const WEBHOOK_URL = "https://discord.com/api/webhooks/1282753778268766288/Lj1KDcV81XCJjNNiZwRzTzVAFYMOEuCVNM9tyURVqI1yh7AvptOgEFR-0he2kNjOJfS1";
+import { ILogObj, ILogObjMeta } from "tslog";
+import { WebhookClient, EmbedBuilder } from "discord.js";
+const WEBHOOK_URL = "hard code your webhook here";
 
 class ErrorTransmitter {
 

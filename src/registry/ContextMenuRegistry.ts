@@ -1,8 +1,6 @@
 import Client from "../structures/Client";
 import { promisify } from "util";
 import fs from "fs";
-import { REST } from '@discordjs/rest';
-import { Routes } from 'discord.js';
 const readdir = promisify(fs.readdir);
 
 export default class ContextMenuRegistry {
@@ -13,10 +11,6 @@ export default class ContextMenuRegistry {
 		this.client = client;
 	}
 
-	/**
-	 * Loads all context menu commands from the contexts directory and registers them in the client.
-	 * @returns {Promise<void>}
-	 */
 	public async loadContexts(): Promise<void> {
 		try {
 			const contextFiles = await readdir(this._dir);

@@ -13,10 +13,6 @@ export default class CommandRegistry {
 		this.client = client;
 	}
 
-	/**
-	 * Loads all commands from the commands directory and registers them in the client.
-	 * @returns {Promise<void>}
-	 */
 	public async loadCommands(): Promise<void> {
 		try {
 			const commandFolders = await readdir(this._dir);
@@ -46,11 +42,6 @@ export default class CommandRegistry {
 		}
 	}
 
-	/**
-	 * Registers all application commands with the Discord API.
-	 * @param commands Array of command data to register.
-	 * @returns {Promise<void>}
-	 */
 	public async registerCommands(commands: any): Promise<void> {
 		const rest = new REST().setToken(this.client.config.token);
 
