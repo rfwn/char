@@ -1,4 +1,4 @@
-import { ActivityType, Client, GatewayIntentBits, Partials } from 'discord.js';
+import { ActivityType, Client, Partials } from 'discord.js';
 import Logger from '../util/Logger';
 import config from '../config';
 import EventRegistry from '../registry/EventRegistry';

@@ -1,4 +1,4 @@
-import { CommandInteraction, EmbedBuilder, TextChannel } from 'discord.js';
+import { CommandInteraction, EmbedBuilder } from 'discord.js';
 import Client from "../../structures/Client";
 import Command from "../../structures/Command";
 import { SlashCommandBuilder } from 'discord.js'

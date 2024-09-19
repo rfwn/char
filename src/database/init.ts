@@ -1,4 +1,4 @@
-import { DataSource, Entity, EntityTarget, ObjectLiteral, Repository } from 'typeorm';
+import { DataSource, EntityTarget, ObjectLiteral, Repository } from 'typeorm';
 
 import Client from '../structures/Client';
 import entities from './entities/';
@@ -20,9 +20,6 @@ export default class Database {
     });
   }
 
-  /**
-   * Init db
-   */
   public async init() {
 	await this.datasource.initialize();
 	return this.client.logger.info('[+] database connection established');

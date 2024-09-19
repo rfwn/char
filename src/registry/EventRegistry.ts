@@ -12,10 +12,6 @@ export default class EventRegistry {
 		this.client = client;
 	}
 
-	/**
-	 * Loads all events from the events directory and registers them.
-	 * @returns {Promise<void>}
-	 */
 	public async loadEvents(): Promise<void> {
 		try {
 			const eventFolders = await readdir(this._dir);
@@ -44,19 +40,11 @@ export default class EventRegistry {
 		}
 	}
 
-	/** 
-	 * Unloads all events and stops listening for them.
-	 * @returns {void}
-	 */
 	public unloadEvents(): void {
 		this.client.events.forEach(event => event.turnOff());
 		this.client.logger.info(`[✓] all events have been unloaded`);
 	}
 
-	/**
-	 * Reloads all events by unloading and reloading them.
-	 * @returns {void}
-	 */
 	public async reloadEvents(): Promise<void> {
 		this.unloadEvents();
 		await this.loadEvents();
