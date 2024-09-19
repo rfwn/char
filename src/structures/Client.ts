@@ -6,14 +6,12 @@ import Event from './Event';
 import Command from './Command';
 import CommandRegistry from '../registry/CommandRegistry';
 import ContextMenuRegistry from '../registry/ContextMenuRegistry';
-import Database from '../database/init';
 import ContextMenu from './Context';
 import { validateConfig } from '../util';
 
 class Char extends Client {
 	public readonly logger: typeof Logger;
 	public readonly config: any;
-	public readonly database: Database;
 	public readonly eventRegistry: EventRegistry;
 	public readonly commandRegistry: CommandRegistry;
 	public readonly contextRegistry: ContextMenuRegistry;
@@ -44,7 +42,6 @@ class Char extends Client {
 			this.logger.error('Missing config values', error);
 			process.exit(1);
 		}
-		this.database = new Database(this);
 		this.events = new Map();
 		this.eventRegistry = new EventRegistry(this);
 		this.commands = new Map();
